@@ -6,12 +6,27 @@
     }
   ],
   "fxcalendar": 
-    [
-  {
-    "currency": "USD",
-    "date": "2019-12-25",
-    "description": "Christmas"
-  }
+    [{
+		"centerID": "31",
+		"currencyCodeISO": "EUR",
+		"countryCodeISO": "EU",
+		"relatedFinancialCentre": "TARGET (Euro)",
+		"eventYear": "2019",
+		"eventDate": "2019-12-25",
+		"eventDayOfWeek": "Wed",
+		"eventName": "Christmas Day",
+		"fileType": "C"
+	}, {
+		"centerID": "2",
+		"currencyCodeISO": "USD",
+		"countryCodeISO": "US",
+		"relatedFinancialCentre": "New York",
+		"eventYear": "2020",
+		"eventDate": "2020-01-01",
+		"eventDayOfWeek": "Wed",
+		"eventName": "New Year's Day",
+		"fileType": "C"
+	}
 ]
   
 }
