@@ -6,7 +6,7 @@
     }
   ],
   "fxcalendar": 
-    [{
+    	[{
 		"centerID": "31",
 		"currencyCodeISO": "EUR",
 		"countryCodeISO": "EU",
@@ -26,7 +26,10 @@
 		"eventDayOfWeek": "Wed",
 		"eventName": "New Year's Day",
 		"fileType": "C"
-	}
-]
+	}],
+  "edg": {
+	  "sri": 5
+  }
+
   
 }
