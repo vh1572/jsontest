@@ -53,15 +53,16 @@ function parseConstituentTable(html) {
       .find('tr')
       .slice(1)
       .map((_, row) => {
-        const values = $(row)
-          .find('th, td')
-          .map((cellIndex, cell) => {
-            const header = headers[cellIndex] ?? `column_${cellIndex}`;
-            return [header, $(cell).text().trim()];
-          })
-          .toArray();
+        const entry = {};
 
-        const entry = Object.fromEntries(values);
+        $(row)
+          .find('th, td')
+          .toArray()
+          .forEach((cell, cellIndex) => {
+            const header = headers[cellIndex] ?? `column_${cellIndex}`;
+            entry[header] = $(cell).text().trim();
+          });
+
         return entry[headers[symbolIndex]] ? entry : null;
       })
       .toArray()
