@@ -1,12 +1,14 @@
 import fs from 'node:fs/promises';
 import process from 'node:process';
 import * as cheerio from 'cheerio';
-import yahooFinance from 'yahoo-finance2';
+import YahooFinance from 'yahoo-finance2';
 import { stringify } from 'csv-stringify/sync';
 
 const SP500_URL = 'https://en.wikipedia.org/wiki/List_of_S%26P_500_companies';
 const MIDCAP_URL = 'https://en.wikipedia.org/wiki/List_of_S%26P_400_companies';
 const COLUMN_ORDER = ['Symbol', 'Name', 'Sector', 'Price', 'Dividend Yield'];
+
+const yahooFinance = new YahooFinance();
 
 function parseArgs() {
   const args = process.argv.slice(2);
