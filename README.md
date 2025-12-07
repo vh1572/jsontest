@@ -1,28 +1,29 @@
 # Index constituents exporter
 
-This repository contains a Python script to export S&P 500 and S&P MidCap 400 constituents (ticker, name, sector) with a recent closing price and dividend yield into a CSV file.
+This repository contains a Node.js script to export S&P 500 and S&P MidCap 400 constituents (ticker, name, sector) with a recent
+closing price and dividend yield into a CSV file.
 
 ## Prerequisites
-- Python 3.9+
+- Node.js 18+
 - Internet access (to read Wikipedia and query Yahoo Finance)
 
-Install dependencies:
+Install dependencies with npm:
 
 ```bash
-pip install -r requirements.txt
+npm install
 ```
 
 ## Usage
 Run the script directly to generate `index_constituents.csv` in the current directory:
 
 ```bash
-python fetch_indices.py
+node fetch_indices.js
 ```
 
 To save to a custom path, pass `--output` (or `-o`):
 
 ```bash
-python fetch_indices.py --output /path/to/constituents.csv
+node fetch_indices.js --output /path/to/constituents.csv
 ```
 
 The script will print the number of rows written when it finishes.
